@@ -88,55 +88,61 @@ describe("Viking", () => {
   });
 
   describe("attack() method", () => {
-    // it('should be a function', () => {
-    //   expect(typeof viking.attack).toBe('function');
-    // });
-    //
-    // it('should receive 0 arguments', () => {
-    //   expect(viking.attack.length).toEqual(0);
-    // });
-    //
-    // it('should return the strength property of the Viking', () => {
-    //   expect(viking.attack()).toEqual(strength);
-    // });
+    it("should be a function", () => {
+      expect(typeof viking.attack).toBe("function");
+    });
+
+    it("should receive 0 arguments", () => {
+      expect(viking.attack.length).toEqual(0);
+    });
+
+    it("should return the strength property of the Viking", () => {
+      expect(viking.attack()).toEqual(strength);
+    });
   });
 
   describe("receiveDamage() method", () => {
-    // it('should be a function', () => {
-    //   expect(typeof viking.receiveDamage).toBe('function');
-    // });
-    //
-    // it('should receive 1 argument (the damage)', () => {
-    //   expect(viking.receiveDamage.length).toEqual(1);
-    // });
-    //
-    // it('should remove the received damage from the health property', () => {
-    //   viking.receiveDamage(50);
-    //   expect(viking.health).toEqual(health - 50);
-    // });
-    //
-    // it('should return "NAME has received DAMAGE points of damage", if the Viking is still alive', () => {
-    //   expect(viking.receiveDamage(50)).toEqual(`${name} has received 50 points of damage`);
-    //   expect(viking.receiveDamage(75)).toEqual(`${name} has received 75 points of damage`);
-    // });
-    //
-    // it('should return "NAME has died in act of combat", if the Viking dies', () => {
-    //   expect(viking.receiveDamage(health)).toEqual(`${name} has died in act of combat`);
-    // });
+    it("should be a function", () => {
+      expect(typeof viking.receiveDamage).toBe("function");
+    });
+
+    it("should receive 1 argument (the damage)", () => {
+      expect(viking.receiveDamage.length).toEqual(1);
+    });
+
+    it("should remove the received damage from the health property", () => {
+      viking.receiveDamage(50);
+      expect(viking.health).toEqual(health - 50);
+    });
+
+    it('should return "NAME has received DAMAGE points of damage", if the Viking is still alive', () => {
+      expect(viking.receiveDamage(50)).toEqual(
+        `${name} has received 50 points of damage`
+      );
+      expect(viking.receiveDamage(75)).toEqual(
+        `${name} has received 75 points of damage`
+      );
+    });
+
+    it('should return "NAME has died in act of combat", if the Viking dies', () => {
+      expect(viking.receiveDamage(health)).toEqual(
+        `${name} has died in act of combat`
+      );
+    });
   });
 
   describe("battleCry() method", () => {
-    // it('should be a function', () => {
-    //   expect(typeof viking.battleCry).toBe('function');
-    // });
-    //
-    // it('should receive 0 arguments', () => {
-    //   expect(viking.battleCry.length).toEqual(0);
-    // });
-    //
-    // it('should return "Odin Owns You All!"', () => {
-    //   expect(viking.battleCry()).toEqual('Odin Owns You All!');
-    // });
+    it("should be a function", () => {
+      expect(typeof viking.battleCry).toBe("function");
+    });
+
+    it("should receive 0 arguments", () => {
+      expect(viking.battleCry.length).toEqual(0);
+    });
+
+    it('should return "Odin Owns You All!"', () => {
+      expect(viking.battleCry()).toEqual("Odin Owns You All!");
+    });
   });
 });
 
